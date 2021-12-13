@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-wight, initial-scale=1.0">
+  <title>Форма регистрации</title>
+  <link rel="stylesheet" href="style_reg.css">
+  <script type="text/javascript">
+      function validation() {
+        valid = true;
+          if ((document.contact_form.phone1.value == '') && (document.contact_form.email1.value == '')) {
+              alert ('Введите хотя бы один контакт');
+              valid = false;
+          }
+          return valid;
+          validation();
+  }
+  </script>
+</head>
+<body>
+  <article class="container">
+    <div class="form-box">
+      <form action="#" method="post" class="form">
+        <h2 class="form__title">Регистрация</h2>
+        <div class="form__input" style="height: 400px; overflow: auto;">
+          <p>Фамилия<font color="BA1313">*</font></p>
+          <p><input tabindex="1" type="text" placeholder="..." required class="form__input-next"></p>
+          <p>Имя<font color="BA1313">*</font></p>
+          <p><input tabindex="2" type="text" required class="form__input-next"/></p>
+          <p>Отчество<font color="BA1313">*</font></p>
+          <p><input tabindex="3" type="text" placeholder="..." required class="form__input-next"></p>
+          <p>Номер телефона</p>
+          <p><input tabindex="4" name="phone1" type="tel" placeholder="8xxx-xxx-xx-xx" pattern="8[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" class="form__input-next"/></p>
+          <p>Эл. почта</p>
+          <p><input tabindex="5" name="email1" type="email" placeholder="..." class="form__input-next"/></p>
+          <p>Логин<font color="BA1313">*</font></p>
+          <p><input tabindex="6" type="text" placeholder="..." required class="form__input-next"></p>
+          <p>Пароль<font color="BA1313">*</font></p>
+          <p><input tabindex="7" type="password" placeholder="..." required class="form__input-next"></p>
+          <button tabindex="8" type="submit" class="form__bth">Зарегистрироваться</button>
+          <br>
+          <span text-align="center">
+             Уже есть аккаунт?
+             <a href="#" tabindex="-1" class="form__reg">Войти</a>
+          </span>
+        </div>
+      </form>
+    </div>
+  </article>
+</body>
+
+</html>
